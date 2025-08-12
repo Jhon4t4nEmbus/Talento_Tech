@@ -1,0 +1,61 @@
+print("Ejemplo calculadora sencilla")
+print()
+#MENU:
+print("MENU:")
+print("1: Sumar")
+#print("1: +")
+print("2: -")
+print("3: *")
+print("4: Dividir (/)")
+print("5: Potenciación (pop)")
+print("6: Radicando (rad)")
+print("7: Logaritmo (log2)")
+print()
+#Ingreso de datos:
+opcion=input("Ingrese la opción deseada del menú: ") # la opción se guarda como cadena
+
+#Operaciones
+if opcion=='1':
+  numero_uno=float(input("Ingrese el primer valor de la operación: "))# Guarda como flotante (numero real)
+  numero_dos=float(input("Ingrese el segundo valor de la operación: "))
+  print("Vamos a sumar(+) los dos valores ingresados:")
+  print('La suma es:',numero_uno+numero_dos)
+if opcion=='2':
+  numero_uno=float(input("Ingrese el primer valor de la operación: "))# Guarda como flotante (numero real)
+  numero_dos=float(input("Ingrese el segundo valor de la operación: "))
+  print("Vamos a restar(-) los dos valores ingresados:\n")
+  resta=numero_uno-numero_dos
+  print("Resultado=",resta)
+if opcion=='3':
+  numero_uno=float(input("Ingrese el primer valor de la operación: "))# Guarda como flotante (numero real)
+  numero_dos=float(input("Ingrese el segundo valor de la operación: "))
+  print("Vamos a multiplicar(*) los dos valores ingresados:\n")
+  #print(f'{numero_uno}*{numero_dos}={numero_uno*numero_dos}')
+  mult=numero_uno*numero_dos
+  print(f"{numero_uno}*{numero_dos}={mult}")
+if opcion=='4'or opcion=='/' or opcion=='Dividir':
+  numero_uno=float(input("Ingrese el primer valor de la operación: "))# Guarda como flotante (numero real)
+  numero_dos=float(input("Ingrese el segundo valor de la operación: "))
+  print("Vamos a dividir(/) los dos valores ingresados:\n")
+  #VALIDANDO EL DENOMINADOR (debe ser diferente de cero)
+  if numero_dos!=0:
+    print(numero_uno/numero_dos)
+  else:
+    print("¡No es posible dividir entre cero!")
+if opcion=='5':
+    base=float(input("Ingrese la base de la operación: "))
+    exponente=float(input("Ingrese el exponente de la operación: "))
+    print("Vamos a potenciar (pop) los dos valores ingresados:\n")
+    potencia=base**exponente
+    print(potencia)
+if opcion=='6':
+  radicando=float(input("Ingrese el radicando de la operación: "))
+  indice=float(input("Ingrese el indice de la operación: "))
+  print("Vamos a calcular la Raiz:\n")
+  Raiz=radicando**(1/indice)
+  print(Raiz)
+if opcion=='7':
+  numero=float(input("Ingrese el numero logaritmico: "))
+  print("Vamos a calcular el Logaritmo:\n")
+  log=math.log2(numero)
+  print(log)
