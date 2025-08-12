@@ -1,1 +1,0 @@
-# Talento_Tech
